@@ -22,19 +22,10 @@ plt.xlabel("Hours")
 plt.ylabel("Energy in kWH")
 
 
-Q1 = []
-Q2 = []
 
 
-
-numbers = {'set_of_numbers': [1,2,3,4,5,6,7,8,9,10]}
-df = DataFrame(numbers,columns=['set_of_numbers'])
-
-df['equal_or_lower_than_4?'] = df['set_of_numbers'].apply(lambda x: 'True' if x <= 4 else 'False')
-
-print (df)
-
-
+Q1=[]
+Q2=[]
 for i in E_Surplus:
     if i < 0:
         Q1 = 0
@@ -43,5 +34,6 @@ for i in E_Surplus:
     else:
         Q1 = 1000/3600
         Q2 = 0
+        
 
-    print (Q1)
+print (Q1)
